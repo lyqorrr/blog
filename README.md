@@ -1,8 +1,8 @@
-# 🌩️ DK — Cloud Security Architect Portfolio
+# 🌩️ Lyqorrr — Cloud Security Architect Portfolio
 
 ## ✨ Overview
 
-This is my personal portfolio website where I document my learning path in cybersecurity, cloud security, and systems programming. The site features a sophisticated dark theme with purple accents, smooth animations, and a focus on both aesthetics and readability.
+This is my personal portfolio website where I document my learning path in cybersecurity, cloud security, and systems programming. The site features a warm, organic aesthetic with moody neutrals and amber accents, smooth animations, and a focus on both elegance and readability.
 
 ## 🎯 Purpose
 
@@ -14,30 +14,30 @@ This is my personal portfolio website where I document my learning path in cyber
 ## 🚀 Features
 
 ### Design & UX
-- **Modern Dark Theme**: Eye-friendly dark background with vibrant purple (#8b5cf6) accents
-- **Smooth Animations**: Fade-ins, slide-downs, hover effects, and gradient animations
+- **Warm Organic Theme**: Eye-friendly dark background with sophisticated amber (#d9a05b) and copper accents
+- **Smooth Animations**: Fade-ins, slide-downs, and gentle hover effects
 - **Responsive Design**: Fully mobile-optimized with breakpoints for tablets and phones
-- **Floating Shapes**: Animated background elements creating depth and visual interest
-- **Glassmorphism**: Backdrop blur effects on cards and sections
+- **Subtle Background Elements**: Soft floating shapes creating depth without distraction
+- **Refined Aesthetics**: Backdrop blur effects on cards and sections with matte, paper-like surfaces
 
 ### Technical Features
 - **Pure HTML/CSS/JS**: No frameworks, lightweight and fast
-- **Custom Fonts**: Playfair Display for headers, Space Grotesk for body text
-- **Search Functionality**: Real-time filtering in daily logs
+- **Custom Fonts**: Crimson Pro for headers (warm serif), Work Sans for body text (organic sans-serif)
+- **Search Functionality**: Real-time filtering in daily logs with debounce for performance
 - **Smooth Scrolling**: Native smooth scroll with offset for fixed navigation
-- **Hide-on-Scroll Nav**: Navigation hides when scrolling down, appears when scrolling up
-- **SVG Noise Overlay**: Subtle texture effect across the entire site
+- **Performance Optimized**: Removed heavy animations and scroll-based effects that caused stuttering
+- **Canvas Texture Overlay**: Subtle organic texture effect across the entire site
 
 ### Content Sections
 1. **Home Page** (`index.html`)
-   - Hero section with animated profile
+   - Hero section with elegant profile
    - About Me introduction
    - Current Focus (4 skill cards)
    - Contact information
 
 2. **Daily Logs** (`daily-logs.html`)
    - Chronological learning entries
-   - Search/filter functionality
+   - Debounced search functionality
    - Month dividers
    - Topics, hours, and tags for each entry
 
@@ -52,14 +52,14 @@ This is my personal portfolio website where I document my learning path in cyber
 Frontend:
 ├── HTML5 (Semantic markup)
 ├── CSS3 (Custom properties, Grid, Flexbox)
-├── Vanilla JavaScript (ES6+)
-└── Google Fonts (Playfair Display, Space Grotesk)
+├── Vanilla JavaScript (ES6+, optimized)
+└── Google Fonts (Crimson Pro, Work Sans)
 
 Design:
-├── Custom SVG noise texture
-├── CSS animations & transitions
-├── Gradient backgrounds
-└── Glassmorphism effects
+├── Custom SVG canvas texture
+├── CSS transitions (no heavy animations)
+├── Gradient backgrounds (subtle)
+└── Matte, organic aesthetic
 ```
 
 ## 📁 Project Structure
@@ -74,17 +74,20 @@ Design:
 └── README.md              # This file
 ```
 
-## 🎨 Color Palette
+## 🎨 Color Palette - Moody Neutrals with Amber
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Deep Black | `#0a0a0a` | Background |
-| Dark Gray | `#1a1a1a` | Card backgrounds |
-| Purple Primary | `#8b5cf6` | Accents, borders, CTAs |
-| Purple Light | `#a78bfa` | Text, hover states |
-| Purple Lighter | `#c4b5fd` | Secondary text |
-| White | `#ffffff` | Headings |
-| Light Gray | `#e0e0e0` | Body text |
+| Graphite | `#34312d` | Primary Background |
+| Warm Black | `#2b2724` | Card backgrounds, darker sections |
+| Amber | `#d9a05b` | Primary accent, links, CTAs |
+| Copper | `#b87d4b` | Secondary accent, hover states |
+| Warm Gray | `#a3978c` | Body text, secondary text |
+| Ivory | `#f7f0e8` | Headings, primary text |
+| Rust | `#9d5c3f` | Subtle highlights |
+
+### Design Philosophy
+The color scheme creates a warm, grounded, and sophisticated aesthetic—like a leather-bound journal or aged wood. It's professional yet approachable, serious yet warm. The amber and copper tones add richness without being overwhelming, while the neutral foundation keeps the focus on content.
 
 ## 🧭 Current Learning Focus
 
@@ -104,7 +107,7 @@ Each log entry includes:
 
 ## 🔗 Links & Contact
 
-- **Email**: dhayalankcys007@gmail.com
+- **Email**: lyqorrr@gmail.com
 - **GitHub**: [@lyqorrr](https://github.com/lyqorrr/)
 - **Website**: [lyqorrr.github.io](https://lyqorrr.github.io/blog/)
 
@@ -114,10 +117,18 @@ Each log entry includes:
 - [ ] Implement tag-based filtering
 - [ ] Add RSS feed for blog posts
 - [ ] Create timeline visualization of learning journey
-- [ ] Add dark/light theme toggle
 - [ ] Integrate GitHub activity
 - [ ] Add search across all content
 
+## ⚡ Performance Optimizations
+
+The redesign focused on removing performance bottlenecks:
+- Removed complex CSS animations (pulse, gradient rotation)
+- Removed scroll-triggered nav hiding/showing
+- Simplified floating shape animations (static positioning)
+- Added debounce to search functionality (200ms delay)
+- Reduced JavaScript event listeners
+- Minimized repaints and reflows
 
 ## 📄 License
 
@@ -125,7 +136,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-Inspired by modern portfolio designs and the cybersecurity community. Built with purpose, designed with passion.
+Inspired by organic, artisan design aesthetics and the cybersecurity community. Built with purpose, designed with warmth.
 
 ---
 
@@ -135,7 +146,7 @@ Inspired by modern portfolio designs and the cybersecurity community. Built with
 
 ------------------------------------------------------------------------------------------------------------------------
 
-DK (lyqorrr)
+Lyqorrr
 
 Aspiring Cloud Security Architect  
 
