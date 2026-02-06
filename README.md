@@ -1,4 +1,4 @@
-# 🌩️ Dykat — Cloud Security Architect Portfolio
+# 🌩️ DK — Cloud Security Architect Portfolio
 
 ## ✨ Overview
 
@@ -105,8 +105,8 @@ Each log entry includes:
 ## 🔗 Links & Contact
 
 - **Email**: dhayalankcys007@gmail.com
-- **GitHub**: [@dykat](https://github.com/dykat)
-- **Website**: [dykat.github.io](https://dykat.github.io)
+- **GitHub**: [@lyqorrr](https://github.com/lyqorrr)
+- **Website**: [lyqorrr.github.io](https://lyqorrr.github.io)
 
 ## 🎯 Future Enhancements
 
@@ -135,7 +135,7 @@ Inspired by modern portfolio designs and the cybersecurity community. Built with
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Dykat (dykatx)
+DK (lyqorrr)
 
 Aspiring Cloud Security Architect  
 
