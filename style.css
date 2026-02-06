@@ -161,10 +161,13 @@ nav {
     color: var(--accent-primary);
 }
 
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    filter: drop-shadow(0 0 8px rgba(217, 160, 91, 0.4));
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 0 12px rgba(217, 160, 91, 0.3);
 }
 
 .nav-links {
