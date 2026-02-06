@@ -1,4 +1,4 @@
-# 🌩️ Lyqorrr — Cloud Security Architect Portfolio
+# 🌩️ Lyqorrr - Cloud Security Architect Portfolio
 
 ## ✨ Overview
 
@@ -134,15 +134,8 @@ The redesign focused on removing performance bottlenecks:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
 
-Inspired by organic, artisan design aesthetics and the cybersecurity community. Built with purpose, designed with warmth.
-
----
-
-**Note**: This is a living document of my learning journey. The site evolves as I grow in my cloud security career path.
-
-*Last Updated: November 2025*
+*Last Updated: February 2026*
 
 ------------------------------------------------------------------------------------------------------------------------
 
