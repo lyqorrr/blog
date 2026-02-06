@@ -24,16 +24,14 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--warm-black) 0%, var(--graphite) 100%);
+            background: var(--warm-black);
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 3px solid var(--accent-primary);
-            box-shadow: 
-                0 0 40px rgba(217, 160, 91, 0.3),
-                0 8px 32px rgba(0, 0, 0, 0.6);
-            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(217, 160, 91, 0.4);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -44,22 +42,9 @@
             object-fit: cover;
         }
 
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            padding: 4px;
-            background: linear-gradient(135deg, var(--amber), var(--copper), var(--rust), var(--amber));
-            background-size: 200% 200%;
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-
         .profile-img:hover {
-            transform: translateY(-8px) scale(1.05);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(217, 160, 91, 0.5);
         }
 
         .status-badge {
@@ -134,7 +119,7 @@
 
         .skill-card {
             padding: 45px;
-            background: linear-gradient(135deg, rgba(43, 39, 36, 0.4) 0%, rgba(52, 49, 45, 0.6) 100%);
+            background: rgba(43, 39, 36, 0.4);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             transition: all 0.3s ease;
@@ -143,27 +128,10 @@
             overflow: hidden;
         }
 
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(217, 160, 91, 0.06), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 0;
-        }
-
         .skill-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border-color: var(--accent-primary);
-        }
-
-        .skill-card:hover::before {
-            opacity: 1;
         }
 
         .skill-card > * {
@@ -442,9 +410,6 @@
                 <button class="btn btn-primary" onclick="scrollToSection('about')">Explore My Journey</button>
                 <a href="daily-logs.html" class="btn btn-secondary">View Daily Logs</a>
             </div>
-            <div class="scroll-indicator" onclick="scrollToSection('about')">
-                <span>↓</span>
-            </div>
         </header>
 
         <div class="content-section" id="about">
@@ -516,7 +481,7 @@
         </footer>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll with offset for navigation
         function scrollToSection(id) {
             const element = document.getElementById(id);
@@ -532,17 +497,24 @@
             }
         }
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== "") {
-                    e.preventDefault();
-                    scrollToSection(href.substring(1));
-                }
-            });
-        });
-    </script>
-</body>
-</html>
-
+                // Smooth scroll for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const href = anchor.getAttribute('href');
+                        const element = document.querySelector(href);
+                        if (element) {
+                            const offset = 80;
+                            const elementPosition = element.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - offset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </body>
+        </html>
