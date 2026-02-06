@@ -105,8 +105,8 @@ Each log entry includes:
 ## 🔗 Links & Contact
 
 - **Email**: dhayalankcys007@gmail.com
-- **GitHub**: [@lyqorrr](https://github.com/lyqorrr)
-- **Website**: [lyqorrr.github.io](https://lyqorrr.github.io)
+- **GitHub**: [@lyqorrr](https://github.com/lyqorrr/)
+- **Website**: [lyqorrr.github.io](https://lyqorrr.github.io/blog/)
 
 ## 🎯 Future Enhancements
 
