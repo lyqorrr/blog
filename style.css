@@ -37,7 +37,7 @@ body {
     line-height: 1.6;
 }
 
-/* Subtle organic texture background */
+/* Solid background - no gradients */
 body::before {
     content: '';
     position: fixed;
@@ -45,9 +45,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(157, 92, 63, 0.08), transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(184, 125, 75, 0.06), transparent 50%);
     pointer-events: none;
     z-index: 0;
 }
@@ -65,47 +62,9 @@ body::before {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Simplified floating shapes - no animation for performance */
+/* Floating shapes removed for solid background */
 .floating-shapes {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.08;
-}
-
-.shape:nth-child(1) {
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(135deg, var(--amber), var(--copper));
-    top: 15%;
-    left: 8%;
-}
-
-.shape:nth-child(2) {
-    width: 280px;
-    height: 280px;
-    background: linear-gradient(135deg, var(--copper), var(--rust));
-    top: 65%;
-    right: 12%;
-}
-
-.shape:nth-child(3) {
-    width: 220px;
-    height: 220px;
-    background: linear-gradient(135deg, var(--rust), var(--amber));
-    bottom: 25%;
-    left: 55%;
+    display: none;
 }
 
 .container {
@@ -209,7 +168,7 @@ nav {
 
 /* Content sections */
 .content-section {
-    background: linear-gradient(135deg, rgba(43, 39, 36, 0.6) 0%, rgba(52, 49, 45, 0.4) 100%);
+    background: rgba(43, 39, 36, 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     padding: 90px 70px;
@@ -217,22 +176,7 @@ nav {
     border-radius: 16px;
     animation: fadeInUp 0.8s ease-out;
     position: relative;
-    transition: all 0.4s ease;
-}
-
-.content-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(217, 160, 91, 0.04), transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 0;
-    border-radius: 16px;
+    transition: all 0.3s ease;
 }
 
 .content-section > * {
@@ -241,13 +185,8 @@ nav {
 }
 
 .content-section:hover {
-    border-color: rgba(217, 160, 91, 0.45);
-    transform: translateY(-3px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
-}
-
-.content-section:hover::before {
-    opacity: 1;
+    border-color: var(--accent-primary);
+    background: rgba(52, 49, 45, 0.7);
 }
 
 h2 {
@@ -294,47 +233,26 @@ h2::after {
     letter-spacing: 0.5px;
     font-weight: 600;
     position: relative;
-    overflow: hidden;
     border-radius: 6px;
     color: var(--accent-primary);
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-primary);
-    transition: left 0.3s ease;
-    z-index: -1;
-}
-
-.btn:hover::before {
-    left: 0;
-}
-
 .btn:hover {
-    color: var(--bg-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(217, 160, 91, 0.3);
+    background: rgba(217, 160, 91, 0.1);
+    border-color: var(--copper);
+    color: var(--copper);
 }
 
 .btn-primary {
-    background: var(--accent-primary);
-    color: var(--bg-primary);
+    background: transparent;
+    color: var(--accent-primary);
     border: 2px solid var(--accent-primary);
 }
 
-.btn-primary::before {
-    background: var(--copper);
-}
-
 .btn-primary:hover {
-    background: var(--copper);
+    background: rgba(217, 160, 91, 0.1);
     border-color: var(--copper);
-    color: var(--text-primary);
+    color: var(--copper);
 }
 
 .btn-secondary {
@@ -342,8 +260,9 @@ h2::after {
 }
 
 .btn-secondary:hover {
-    color: var(--bg-primary);
-    border-color: var(--accent-primary);
+    background: rgba(217, 160, 91, 0.1);
+    border-color: var(--copper);
+    color: var(--copper);
 }
 
 /* Footer */
