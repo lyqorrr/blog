@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Logs | DK</title>
+    <title>Daily Logs | Lyqorrr</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Page-specific styles */
@@ -19,11 +19,11 @@
         }
 
         .log-card {
-            background: rgba(20, 20, 20, 0.6);
-            border: 1px solid rgba(139, 92, 246, 0.25);
+            background: rgba(43, 39, 36, 0.5);
+            border: 1px solid var(--border-color);
             padding: 35px;
-            border-radius: 16px;
-            transition: all 0.4s ease;
+            border-radius: 12px;
+            transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
             display: block;
@@ -36,17 +36,17 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 4px;
+            width: 3px;
             height: 0;
-            background: linear-gradient(180deg, #8b5cf6, #a78bfa);
-            transition: height 0.4s ease;
+            background: linear-gradient(180deg, var(--amber), var(--copper));
+            transition: height 0.3s ease;
         }
 
         .log-card:hover {
-            background: rgba(25, 25, 25, 0.8);
-            border-color: #8b5cf6;
-            transform: translateX(15px);
-            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+            background: rgba(52, 49, 45, 0.7);
+            border-color: var(--accent-primary);
+            transform: translateX(12px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
         }
 
         .log-card:hover::before {
@@ -54,24 +54,24 @@
         }
 
         .log-date {
-            font-family: 'Playfair Display', serif;
-            color: #ffffff;
+            font-family: 'Crimson Pro', serif;
+            color: var(--text-primary);
             font-size: 1.8em;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .log-summary {
-            color: #a78bfa;
+            color: var(--warm-gray);
             font-size: 1em;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 20px;
         }
 
         .log-meta {
             display: flex;
             gap: 25px;
-            color: #8b5cf6;
+            color: var(--accent-primary);
             font-size: 0.9em;
             font-weight: 500;
             flex-wrap: wrap;
@@ -89,11 +89,9 @@
             flex-wrap: wrap;
             margin-bottom: 40px;
             padding: 30px;
-            background: rgba(20, 20, 20, 0.5);
-            border-radius: 16px;
-            border: 1px solid rgba(139, 92, 246, 0.2);
-
-            /* ensure this area is above floating overlays on hosted site */
+            background: rgba(43, 39, 36, 0.4);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
             position: relative;
             z-index: 300;
             pointer-events: auto;
@@ -105,61 +103,42 @@
             pointer-events: auto;
         }
 
-        .filter-btn {
-            padding: 10px 25px;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            color: #a78bfa;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #8b5cf6;
-            color: #ffffff;
-            border-color: #8b5cf6;
-        }
-
         .search-box {
             flex: 1;
             min-width: 250px;
             padding: 12px 20px;
-            background: rgba(10, 10, 10, 0.5);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 8px;
-            color: #e0e0e0;
-            font-family: 'Space Grotesk', sans-serif;
+            background: rgba(20, 18, 16, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-family: 'Work Sans', sans-serif;
             transition: all 0.3s ease;
         }
 
         .search-box:focus {
             outline: none;
-            border-color: #8b5cf6;
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 16px rgba(217, 160, 91, 0.2);
         }
 
         .month-divider {
-            font-family: 'Playfair Display', serif;
-            color: #8b5cf6;
+            font-family: 'Crimson Pro', serif;
+            color: var(--accent-primary);
             font-size: 2em;
             font-weight: 700;
             margin: 50px 0 30px 0;
             padding-bottom: 15px;
-            border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+            border-bottom: 2px solid var(--border-color);
         }
 
         .no-results-message {
             text-align: center;
             padding: 60px 20px;
-            color: #a78bfa;
+            color: var(--warm-gray);
             font-size: 1.2em;
-            background: rgba(139, 92, 246, 0.05);
+            background: rgba(217, 160, 91, 0.05);
             border-radius: 12px;
-            border: 1px dashed rgba(139, 92, 246, 0.3);
+            border: 1px dashed var(--border-color);
             margin-top: 30px;
             display: none;
         }
@@ -187,11 +166,6 @@
             .search-box {
                 min-width: 100%;
                 width: 100%;
-            }
-
-            .filter-btn {
-                padding: 8px 18px;
-                font-size: 0.9em;
             }
 
             .log-card {
@@ -276,7 +250,7 @@
 
     <nav>
         <div class="nav-content">
-            <a href="index.html" class="logo">DK</a>
+            <a href="index.html" class="logo">Lyqorrr</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="daily-logs.html" class="active">Daily Logs</a></li>
@@ -294,23 +268,23 @@
 
         <div class="content-section">
             <div class="filter-section">
-                <input type="text" class="search-box" placeholder="Search logs...">
+                <input type="text" class="search-box" placeholder="Search logs..." id="searchInput">
             </div>
 
             <div class="month-divider">November 2025</div>
 
-            <div class="log-list">
+            <div class="log-list" id="logList">
                 <a href="trip.html" class="log-card">
                     <div class="log-date">November 21, 2025</div>
                     <div class="log-summary">
-                        Tanjore (Thanjavur) had been on my list for a while. Not for spiritual reasons — I’m very proudly not in the “divine energy” club (I always isolate from them lol).
-I go to historical places the same way some people go to IKEA: for the structure, the craftsmanship, the angles, and the pure ‘humans-built-this?’ factor.
+                        Tanjore (Thanjavur) had been on my list for a while. Not for spiritual reasons — I'm very proudly not in the "divine energy" club (I always isolate from them lol).
+I go to historical places the same way some people go to IKEA: for the structure, the craftsmanship, the angles, and the pure 'humans-built-this?' factor.
 
 And Tanjore gave me plenty of that.
 
-But here’s the thing — whenever I look at architecture, my brain automatically goes,
-“Okay, but is this more dramatic than Cologne Cathedral?”
-It’s like having a loud European hype-man living in my head.
+But here's the thing — whenever I look at architecture, my brain automatically goes,
+"Okay, but is this more dramatic than Cologne Cathedral?"
+It's like having a loud European hype-man living in my head.
                     </div>
                 </a>
 
@@ -366,7 +340,7 @@ It’s like having a loud European hype-man living in my head.
                     </div>
                 </a>
 
-                <div class="no-results-message">
+                <div class="no-results-message" id="noResults">
                     🔍 No logs found matching your criteria
                 </div>
             </div>
@@ -379,51 +353,56 @@ It’s like having a loud European hype-man living in my head.
                 <a href="index.html#focus">Skills</a>
                 <a href="index.html#contact">Contact</a>
             </div>
-            <p>© 2025 DK · Designed & Developed with Purpose</p>
+            <p>© 2025 Lyqorrr · Designed & Developed with Purpose</p>
         </footer>
     </div>
 
     <script>
-         const searchBox = document.querySelector('.search-box');
-         const logCards = document.querySelectorAll('.log-card');
-         const noResultsMsg = document.querySelector('.no-results-message');
-         
-         let currentSearch = '';
- 
-         // Search functionality
-         searchBox.addEventListener('input', function() {
-             currentSearch = this.value.toLowerCase();
-             applyFilters();
-         });
- 
-         // Apply both search and filter
-         function applyFilters() {
-             let visibleCount = 0;
-             
-             logCards.forEach(card => {
-                 const summary = card.querySelector('.log-summary').textContent.toLowerCase();
-                 const date = card.querySelector('.log-date').textContent.toLowerCase();
-                 const tags = card.querySelector('.log-meta').textContent.toLowerCase();
-                 const cardText = summary + ' ' + date + ' ' + tags;
-                 
-                 // Check if card matches search
-                 const matchesSearch = currentSearch === '' || cardText.includes(currentSearch);
-                 // Show or hide card (no filters)
-                 if (matchesSearch) {
-                     card.style.display = 'block';
-                     visibleCount++;
-                 } else {
-                     card.style.display = 'none';
-                 }
-             });
- 
-             // Show message if no results
-             if (visibleCount === 0) {
-                 noResultsMsg.style.display = 'block';
-             } else {
-                 noResultsMsg.style.display = 'none';
-             }
-         }
-     </script>
+        // Performance-optimized search functionality
+        const searchInput = document.getElementById('searchInput');
+        const logCards = document.querySelectorAll('.log-card');
+        const noResultsMsg = document.getElementById('noResults');
+        
+        // Debounce function for better performance
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Search functionality
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+            
+            logCards.forEach(card => {
+                const summary = card.querySelector('.log-summary')?.textContent.toLowerCase() || '';
+                const date = card.querySelector('.log-date')?.textContent.toLowerCase() || '';
+                const tags = card.querySelector('.log-meta')?.textContent.toLowerCase() || '';
+                const cardText = summary + ' ' + date + ' ' + tags;
+                
+                const matchesSearch = searchTerm === '' || cardText.includes(searchTerm);
+                
+                if (matchesSearch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Attach debounced search event
+        searchInput.addEventListener('input', debounce(performSearch, 200));
+    </script>
 </body>
 </html>
