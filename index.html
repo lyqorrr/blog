@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DK - Cloud Security Architect</title>
+    <title>Lyqorrr - Cloud Security Architect</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Home page specific styles */
         header {
             text-align: center;
             padding: 160px 20px 100px;
-            animation: fadeInDown 1s ease-out;
+            animation: fadeInDown 0.8s ease-out;
             position: relative;
         }
 
@@ -24,24 +24,18 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d1a3d 100%);
+            background: linear-gradient(135deg, var(--warm-black) 0%, var(--graphite) 100%);
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 80px;
-            border: 3px solid #8b5cf6;
+            border: 3px solid var(--accent-primary);
             box-shadow: 
-                0 0 60px rgba(139, 92, 246, 0.4),
+                0 0 40px rgba(217, 160, 91, 0.3),
                 0 8px 32px rgba(0, 0, 0, 0.6);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease;
             position: relative;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 60px rgba(139, 92, 246, 0.4), 0 8px 32px rgba(0, 0, 0, 0.6); }
-            50% { box-shadow: 0 0 80px rgba(139, 92, 246, 0.6), 0 12px 40px rgba(0, 0, 0, 0.8); }
         }
 
         .profile-img::before {
@@ -50,24 +44,16 @@
             inset: -4px;
             border-radius: 50%;
             padding: 4px;
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd, #8b5cf6);
+            background: linear-gradient(135deg, var(--amber), var(--copper), var(--rust), var(--amber));
             background-size: 200% 200%;
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            animation: gradientRotate 3s linear infinite;
-        }
-
-        @keyframes gradientRotate {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .profile-img:hover {
-            transform: translateY(-10px) scale(1.05);
-            animation: none;
+            transform: translateY(-8px) scale(1.05);
         }
 
         .status-badge {
@@ -78,37 +64,27 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border: 3px solid #0a0a0a;
-            animation: statusPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes statusPulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            border: 3px solid var(--bg-primary);
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
-            color: #ffffff;
+            font-family: 'Crimson Pro', serif;
+            color: var(--text-primary);
             font-size: 5em;
             margin-bottom: 20px;
             font-weight: 700;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             line-height: 1.1;
-            background: linear-gradient(135deg, #fff, #c4b5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .tagline {
             font-size: 1.4em;
             margin-bottom: 50px;
-            color: #a78bfa;
+            color: var(--warm-gray);
             font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             opacity: 0;
-            animation: fadeIn 1s ease-out 0.5s forwards;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
         }
 
         @keyframes fadeIn {
@@ -121,7 +97,7 @@
             justify-content: center;
             flex-wrap: wrap;
             opacity: 0;
-            animation: fadeIn 1s ease-out 0.8s forwards;
+            animation: fadeIn 0.8s ease-out 0.6s forwards;
         }
 
         .scroll-indicator {
@@ -129,7 +105,6 @@
             bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            animation: bounce 2s infinite;
             cursor: pointer;
             opacity: 0.6;
             transition: opacity 0.3s ease;
@@ -139,15 +114,9 @@
             opacity: 1;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
-        }
-
         .scroll-indicator span {
             font-size: 2em;
-            color: #8b5cf6;
+            color: var(--accent-primary);
         }
 
         .skills-grid {
@@ -159,10 +128,10 @@
 
         .skill-card {
             padding: 45px;
-            background: linear-gradient(135deg, rgba(30, 30, 30, 0.5) 0%, rgba(20, 20, 20, 0.7) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.25);
-            border-radius: 16px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(43, 39, 36, 0.4) 0%, rgba(52, 49, 45, 0.6) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -175,36 +144,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), transparent);
+            background: linear-gradient(135deg, rgba(217, 160, 91, 0.06), transparent);
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
             z-index: 0;
         }
 
-        .skill-card::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-            border-radius: 16px;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 0.4s ease;
-        }
-
         .skill-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-primary);
         }
 
         .skill-card:hover::before {
-            opacity: 1;
-        }
-
-        .skill-card:hover::after {
             opacity: 1;
         }
 
@@ -217,25 +169,25 @@
             font-size: 3em;
             margin-bottom: 25px;
             display: block;
-            filter: grayscale(0.3);
-            transition: all 0.4s ease;
+            filter: grayscale(0.2);
+            transition: all 0.3s ease;
         }
 
         .skill-card:hover .skill-icon {
             filter: grayscale(0);
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.08);
         }
 
         .skill-card h3 {
-            font-family: 'Playfair Display', serif;
-            color: #ffffff;
+            font-family: 'Crimson Pro', serif;
+            color: var(--text-primary);
             margin-bottom: 18px;
             font-size: 1.7em;
             font-weight: 600;
         }
 
         .skill-card p {
-            color: #c4b5fd;
+            color: var(--warm-gray);
             line-height: 1.8;
             font-size: 1.05em;
             margin-top: 0;
@@ -252,80 +204,70 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 30px;
-            padding: 40px;
-            background: rgba(26, 26, 26, 0.5);
-            border: 1px solid rgba(139, 92, 246, 0.25);
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            gap: 25px;
+            padding: 35px;
+            background: rgba(43, 39, 36, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             text-decoration: none;
             color: inherit;
-        }
-
-        .contact-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 4px;
-            height: 0;
-            background: linear-gradient(180deg, #8b5cf6, #a78bfa);
-            transition: height 0.4s ease;
+            transition: all 0.3s ease;
         }
 
         .contact-item:hover {
-            background: rgba(30, 30, 30, 0.7);
-            border-color: #8b5cf6;
+            background: rgba(52, 49, 45, 0.6);
             transform: translateX(10px);
-            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
-        }
-
-        .contact-item:hover::before {
-            height: 100%;
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .contact-icon {
             font-size: 2.5em;
-            transition: transform 0.4s ease;
+            filter: grayscale(0.3);
+            transition: filter 0.3s ease;
         }
 
         .contact-item:hover .contact-icon {
-            transform: scale(1.15) rotate(5deg);
+            filter: grayscale(0);
         }
 
         .contact-item strong {
-            font-family: 'Space Grotesk', sans-serif;
-            color: #ffffff;
             display: block;
+            color: var(--accent-primary);
+            font-size: 0.85em;
             margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 1em;
             letter-spacing: 1px;
+            font-weight: 600;
         }
 
         .contact-item div {
-            color: #a78bfa;
-            font-weight: 300;
-            font-size: 1.05em;
+            color: var(--text-primary);
+            font-size: 1.1em;
         }
 
-        /* Mobile responsive styles */
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 4em;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+        }
+
         @media (max-width: 768px) {
             header {
-                padding: 120px 20px 60px;
+                padding: 120px 20px 80px;
             }
 
             h1 {
                 font-size: 3em;
-                letter-spacing: -1px;
             }
 
             .tagline {
-                font-size: 1.1em;
-                margin-bottom: 30px;
-                padding: 0 10px;
+                font-size: 1.2em;
             }
 
             .profile-img {
@@ -334,75 +276,27 @@
                 font-size: 60px;
             }
 
-            .status-badge {
-                width: 16px;
-                height: 16px;
-                bottom: 8px;
-                right: 8px;
-            }
-
             .cta-buttons {
                 flex-direction: column;
-                gap: 15px;
-                padding: 0 20px;
-                width: 100%;
+                align-items: stretch;
             }
 
             .cta-buttons .btn {
                 width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
-            .scroll-indicator {
-                bottom: 20px;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
-                margin-top: 40px;
+                gap: 20px;
             }
 
             .skill-card {
                 padding: 30px;
             }
 
-            .skill-card h3 {
-                font-size: 1.5em;
-            }
-
-            .skill-card p {
-                font-size: 1em;
-                line-height: 1.7;
-            }
-
-            .skill-icon {
-                font-size: 2.5em;
-                margin-bottom: 20px;
-            }
-
             .contact-info {
                 grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .contact-item {
-                padding: 25px;
-                gap: 20px;
-            }
-
-            .contact-icon {
-                font-size: 2em;
-            }
-
-            .contact-item strong {
-                font-size: 0.9em;
-            }
-
-            .contact-item div {
-                font-size: 0.95em;
-                word-break: break-all;
             }
 
             .container {
@@ -515,7 +409,7 @@
 
     <nav>
         <div class="nav-content">
-            <div class="logo">DK</div>
+            <a href="index.html" class="logo">Lyqorrr</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="daily-logs.html">Daily Logs</a></li>
@@ -533,7 +427,7 @@
                     <div class="status-badge"></div>
                 </div>
             </div>
-            <h1>DK</h1>
+            <h1>Lyqorrr</h1>
             <p class="tagline">Learning to secure the future, one cloud at a time.</p>
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="scrollToSection('about')">Explore My Journey</button>
@@ -585,11 +479,11 @@
         <div class="content-section" id="contact">
             <h2>Get in Touch</h2>
             <div class="contact-info">
-                <a href="mailto:dhayalankcys007@gmail.com" class="contact-item">
+                <a href="mailto:lyqorrr@gmail.com" class="contact-item">
                     <span class="contact-icon">📬</span>
                     <div>
                         <strong>EMAIL</strong>
-                        dhayalankcys007@gmail.com
+                        lyqorrr@gmail.com
                     </div>
                 </a>
                 <a href="https://github.com/lyqorrr" target="_blank" rel="noopener noreferrer" class="contact-item">
@@ -609,11 +503,12 @@
                 <a href="#focus">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
-            <p>© 2025 DK · Designed & Developed with Purpose</p>
+            <p>© 2025 Lyqorrr · Designed & Developed with Purpose</p>
         </footer>
     </div>
 
     <script>
+        // Smooth scroll with offset for navigation
         function scrollToSection(id) {
             const element = document.getElementById(id);
             if (element) {
@@ -628,37 +523,15 @@
             }
         }
 
-        document.querySelectorAll('.skill-card').forEach(card => {
-            card.addEventListener('click', function() {
-                this.style.transform = 'translateY(-12px) scale(1.02)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 300);
-            });
-        });
-
-        let lastScroll = 0;
-        const nav = document.querySelector('nav');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                if (currentScroll > lastScroll) {
-                    nav.style.transform = 'translateY(-100%)';
-                } else {
-                    nav.style.transform = 'translateY(0)';
-                }
-            }
-            
-            lastScroll = currentScroll;
-        });
-
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = this.getAttribute('href').substring(1);
-                scrollToSection(target);
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = href.substring(1);
+                    scrollToSection(target);
+                }
             });
         });
     </script>
